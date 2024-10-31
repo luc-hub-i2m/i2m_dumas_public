@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <style>
+        /*################################################*/
+        /* Container */
+        /*################################################*/
+        .trombinoscope-container {
+            display: flex;                /* Use flexbox for horizontal alignment */
+            overflow-x: auto;            /* Allow horizontal scrolling */
+            overflow-y: hidden;          /* Hide vertical overflow */
+            white-space: nowrap;         /* Prevent line breaks */
+            padding: 10px;               /* Optional padding for aesthetics */
+        }
+
+        .trombinoscope-container::-webkit-scrollbar {
+            display: none;               /* Hide scrollbar */
+        }
+
+        /*################################################*/
+        /* Arrows */
+        /*################################################*/
+        .arrow {
+            background-color: #FF6F61; /* Background color for the buttons */
+            border: none;               /* Remove default border */
+            border-radius: 50%;         /* Make it circular */
+            width: 50px;                /* Width of the arrow buttons */
+            height: 50px;               /* Height of the arrow buttons */
+            cursor: pointer;            /* Change cursor on hover */
+            position: relative;         /* Position relative to the container */
+            font-size: 20px;            /* Increase font size for larger arrows */
+            z-index: 10;                /* Make sure buttons are on top */
+        }
+
+        .left-arrow {
+            left: -49%;                /* Move left arrow to the left */
+            top: 50%;                   /* Center vertically */
+            transform: translateY(300%); /* Adjust vertical alignment */
+        }
+
+        .right-arrow {
+            right: -49%;               /* Move right arrow to the right */
+            top: 50%;                   /* Center vertically */
+            transform: translateY(-307%); /* Adjust vertical alignment */
+        }
+
+        /*################################################*/
+        /* Profile Card */
+        /*################################################*/
+        .profile-card {
+            display: inline-block;        /* Ensure each card is displayed inline */
+            margin-right: 20px;          /* Space between cards */
+            background-color: #fff;      /* Optional background color for cards */
+            border-radius: 8px;          /* Optional: Rounded corners */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow effect */
+            text-align: center;          /* Center text in cards */
+            width: 150px;                /* Set a fixed width for cards */
+            padding: 10px;               /* Padding inside cards */
+        }
+
+        .profile-card img {
+            width: 100%;                 /* Make images responsive to card size */
+            height: auto;                /* Maintain aspect ratio */
+            border-radius: 8px;          /* Optional: Rounded corners for images */
+        }
+
+        /* Profile text styling */
+        .profile-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0 5px;
+        }
+
+        .profile-role {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        /* Hover effect */
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header-placeholder"></div>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    </script>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Logo -->
+        <section class="section-page-logo">
+            <a href="index.html" target="_blank">
+                <img src="images/logo_DuMAS.png" alt="Team Logo" class="logo-branch">
+            </a>
+        </section>
+
+        <!-- Title -->
+        <section class="section-bg-whitesmoke" style="padding: 20px;">
+            <div class="div-title-page">
+                <h1 style="padding-bottom: 0px;">Meet Our Team</h1>
+                <h2 style="color: #FF6F61;">Personnel</h2>
+            </div>
+        </section>
+        
+        <!-- Dynamics -->
+        <section class="section-bg-anthracite" style="padding: 10px 20px 20px 20px;">
+            <h1 style="font-size: 36px; font-variant: small-caps;">Dynamics</h1>
+            <button class="arrow left-arrow"><i class="fas fa-chevron-left"></i></button>
+
+            <div class="trombinoscope-container">
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="images/trombi/professors/girardot.jpeg" alt="Member 2 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Bob Martinez</p>
+                        <p class="profile-role">Data Analyst</p>
+                    </div>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="images/profile3.jpg" alt="Member 3 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Clara Kim</p>
+                        <p class="profile-role">Project Manager</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+            </div>
+            <button class="arrow right-arrow"><i class="fas fa-chevron-right"></i></button>
+        </section>
+
+        <!-- 3MAH -->
+        <section class="section-bg-whitesmoke" style="padding: 10px 20px 20px 20px;">
+            <h1 style="font-size: 36px; font-variant: small-caps;">3MAH</h1>
+            <button class="arrow left-arrow"><i class="fas fa-chevron-left"></i></button>
+
+            <div class="trombinoscope-container">
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="images/trombi/professors/girardot.jpeg" alt="Member 2 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Bob Martinez</p>
+                        <p class="profile-role">Data Analyst</p>
+                    </div>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="images/profile3.jpg" alt="Member 3 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Clara Kim</p>
+                        <p class="profile-role">Project Manager</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+            </div>
+            <button class="arrow right-arrow"><i class="fas fa-chevron-right"></i></button>
+        </section>
+
+        <!-- Fatigue -->
+        <section class="section-bg-anthracite" style="padding: 10px 20px 20px 20px;">
+            <h1 style="font-size: 36px; font-variant: small-caps;">Fatigue</h1>
+            <button class="arrow left-arrow"><i class="fas fa-chevron-left"></i></button>
+
+            <div class="trombinoscope-container">
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="images/trombi/professors/girardot.jpeg" alt="Member 2 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Bob Martinez</p>
+                        <p class="profile-role">Data Analyst</p>
+                    </div>
+                </div>
+                
+                <div class="profile-card">
+                    <img src="images/profile3.jpg" alt="Member 3 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Clara Kim</p>
+                        <p class="profile-role">Project Manager</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <img src="images/trombi/professors/heraud.jpeg" alt="Member 1 Photo">
+                    <div class="profile-info">
+                        <p class="profile-name">Alice Johnson</p>
+                        <p class="profile-role">Research Scientist</p>
+                    </div>
+                </div>
+            </div>
+            <button class="arrow right-arrow"><i class="fas fa-chevron-right"></i></button>
+        </section>
+
+        <section class="section-bg-whitesmoke" style="padding: 20px;">
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+    <!-- Arrow scrolling script -->
+    <script>
+        const container = document.querySelector('.trombinoscope-container');
+        const scrollAmount = 300; // Amount to scroll on button click
+
+        document.querySelector('.left-arrow').addEventListener('click', () => {
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' }); // Scroll left
+        });
+
+        document.querySelector('.right-arrow').addEventListener('click', () => {
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' }); // Scroll right
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /*################################################*/
+        /* Logo */
+        /*################################################*/
+        .logo-linkedin {
+            vertical-align: middle; /* Align with the text */
+            margin-top: -5px; /* Adjust this value to move the logo down */
+        }
+
+        .logo-home {
+            display: block; /* Allows the logo to be centered */
+            margin: 20px auto; /* Center horizontally and add top margin */
+            height: 80px; /* Adjust size as needed */
+            z-index: 1; /* Bring it to the front (optional if not using absolute positioning) */
+        }
+
+        /*################################################*/
+        /* Gradient text for team */
+        /*################################################*/
+        .gradient-text {
+            background: linear-gradient(90deg, #d62e4e, #ffd428, #5983b0, #ed4c05, #3faf46); /* Define your gradient colors */
+            -webkit-background-clip: text; /* Clip the background to the text */
+            -webkit-text-fill-color: transparent; /* Make the text color transparent */
+            font-weight: bold; /* Normal font weight */
+            margin-top: 15px;
+        }
+        
+        /*################################################*/
+        /* Team member cards */
+        /*################################################*/
+        .div-member {
+            width: 110px; /* Set the desired width */
+            height: 140px; /* Set the desired height */
+            display: inline-block; /* Display members in a line */
+            margin: 40px; /* Space between team members */
+            border: 5px solid #2C333C; /* Border color for the frame */
+            border-radius: 10px; /* Rounded corners */
+            overflow: hidden; /* Prevent overflow */
+            transition: transform 0.3s; /* Animation on hover */
+            background-color: white; /* Set background color to white */
+            padding: 10px; /* Add padding inside the frame */
+            text-align: center;
+        }
+
+        .div-member:hover {
+            transform: scale(1.2); /* Slightly enlarge on hover */
+        }
+
+        .div-member a {
+            color: #2C333C; /* Change link color to black */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        .div-member a:hover {
+            text-decoration: none; /* Optional: Underline on hover */
+        }
+
+        .team-image {
+            width: 75px; /* Adjust width as needed */
+            height: 80px; /* Keep aspect ratio */
+            display: block; /* Makes image a block element */
+            margin: 0 auto; /* Center the image */
+        }
+
+        .professor-text,
+        .personnel-text {
+            margin-top: 25px; /* Adjust this value to center them with the PhD text */
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div id="header-placeholder"></div>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    </script>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Welcome -->
+        <section class="section-bg-whitesmoke">
+            <a href="index.html" target="_blank">
+                <img src="images/logo_DuMAS.png" alt="Team Logo" class="logo-home">
+            </a>
+            <h2>Welcome on our lab website!</h2>
+        </section>
+        
+        <!-- About -->
+        <section class="section-bg-img">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </section>
+
+        <!-- Links -->
+        <section class="section-bg-whitesmoke">
+            <div class="div-boxes">
+                <a href="experimental" class="box">Experimental<br>Equipment</a>
+                <a href="numerical" class="box">Numerical<br>Equipment</a>
+                <a href="equipment" class="box">Equipment</a>
+                <a href="supplies" class="box">Supplies</a>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="section-bg-img" id="team">
+            <h2>Meet Our Team</h2>
+            <div class="div-member">
+                <a href="professor.html">
+                    <img src="images/icon_professor.png" alt="Professors/ Researchers" class="team-image">
+                    <h3 class="gradient-text">Professors/ Researchers</h3>
+
+                </a>
+            </div>
+            <div class="div-member">
+                <a href="personnel.html">
+                    <img src="images/icon_personnel.png" alt="Personnel" class="team-image">
+                    <h3 class="gradient-text personnel-text">Personnel</h3>
+                </a>
+            </div>
+            <div class="div-member">
+                <a href="students.html">
+                    <img src="images/icon_student.png" alt="PhD/master Students" class="team-image">
+                    <h3 class="gradient-text">PhD/master Students</h3>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Projetcs -->
+        <section class="section-bg-whitesmoke">
+            <h2>Our Projects</h2>
+            <p>Details about your current and past projects...</p>
+        </section>
+
+        <!-- Join -->
+        <section class="section-bg-whitesmoke" id="join">
+            <h2>Join our lab team!</h2>
+            <div class="div-boxes">
+                <a href="https://www.i2m.u-bordeaux.fr/L-institut-UMR-5295/Offres-d-emploi/Postes-C-EC-Ing2" class="box">Research and<br>Lecturer</a>
+                <a href="https://www.i2m.u-bordeaux.fr/L-institut-UMR-5295/Offres-d-emploi/Offres-de-theses" class="box">PhD</a>
+                <a href="https://www.i2m.u-bordeaux.fr/L-institut-UMR-5295/Offres-d-emploi/Offres-de-Post-Doc" class="box">Postdoctoral<br>Fellowship</a>
+                <a href="https://www.i2m.u-bordeaux.fr/L-institut-UMR-5295/Offres-d-emploi/Offres-d-ATER" class="box">ATER</a>
+                <a href="https://www.i2m.u-bordeaux.fr/L-institut-UMR-5295/Offres-d-emploi/Offres-de-stage-de-Master-et-autres" class="box">Internships</a>
+            </div>
+        </section>
+
+        <!-- Follow -->
+        <section class="section-bg-whitesmoke" id="follow">
+            <h2>Follow us on 
+                <a href="https://www.linkedin.com/company/i2m-d%C3%A9partement-dumas/posts/?feedView=all" target="_blank">
+                    <img src="images/LinkedIn-Blue-14@2x.png" alt="LinkedIn" class="logo-linkedin">
+                </a>
+            </h2>
+            <iframe src="https://www.juicer.io/api/feeds/i2m-departement-dumas-10a1532d-2f70-47ae-b4a1-5bdbe60f5c0b/iframe" frameborder="0" width="1000" height="1000" style="display:block;margin:0 auto;"></iframe>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+</body>
+</html>

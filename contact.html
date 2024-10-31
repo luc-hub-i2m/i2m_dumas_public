@@ -1,0 +1,191 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /*################################################*/
+        /* Divided page */
+        /*################################################*/
+        .divided-page {
+            display: grid; /* Use CSS Grid */
+            grid-template-columns: 50fr 50fr; /* Two equal columns */
+            height: 50vh; /* Full height of the viewport */
+            width: 100%; /* Set full width */
+        }
+
+        .left, .right {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center; /* Center the child element vertically */
+            padding: 0 50px; /* Optional: Adjusts inner padding */
+            background-color: #2C333C;
+        }
+
+        /*################################################*/
+        /* Maps */
+        /*################################################*/
+        .maps {
+            display: flex;          /* Use flexbox for alignment */
+            flex-direction: column; /* Stack children vertically */
+            align-items: center;    /* Center the container horizontally */
+            margin-top:20px;
+        }
+
+        /*################################################*/
+        /* Text */
+        /*################################################*/
+        h3, h4 {
+            margin: 0;            /* Optional: remove margin for better spacing */
+        }
+
+        h4 {
+            font-weight: normal;  /* Optional: make h4 not bold */
+        }
+
+        .text-left {
+            width: 100%; /* Allows flexibility within its container */
+            text-align: left; /* Left-align text within the container */
+            margin-left:150px;
+        }
+
+        /*################################################*/
+        /* Contact form */
+        /*################################################*/
+        .section-contact-form {
+            max-width: 800px; /* Optional: Limit the form width */
+            margin: auto;
+            padding: 20px;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Divide form into two columns */
+            gap: 20px; /* Space between form fields */
+            align-items: start;
+        }
+
+        .form-left,
+        .form-right {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+        }
+
+        button[type="submit"] {
+            grid-column: 1 / span 2; /* Center the button across both columns */
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #2C333C; /* Adjust color as needed */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            resize: none; /* Disables resizing */
+        }
+
+        .contact-form button:hover {
+            background-color: #444c54; /* Slightly darker shade for hover */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header-placeholder"></div>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    </script>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Logo -->
+        <section class="section-page-logo">
+            <a href="index.html" target="_blank">
+                <img src="images/logo_DuMAS.png" alt="Team Logo" class="logo-branch">
+            </a>
+        </section>
+
+        <!-- Title -->
+        <section class="section-bg-whitesmoke" style="padding: 20px;">
+            <div class="div-title-page">
+                <h1>Let's get in touch</h1>
+            </div>
+        </section>
+
+        <!-- Address -->
+        <section class="section-bg-anthracite" style="padding: 20px;">
+            <a href="https://www.google.fr/maps/place/Arts+et+m%C3%A9tiers/@44.8029554,-0.6035077,1419m/data=!3m2!1e3!5s0xd54d882a7437153:0xb25d7e07ac22e6d2!4m6!3m5!1s0xd55277dc03d9ea1:0xc5bdfbe8822efc63!8m2!3d44.804329!4d-0.6012709!16s%2Fg%2F1tc_mgv6?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <h2>Adress</h2>
+            </a>
+            <div class="divided-page">
+                <div class="left">
+                    <div class="text-left">
+                        <h3>Campus Arts et Métiers de Bordeaux - Talence</h3>
+                        <h4>Laboratoire I2M, Bâtiment R<br>Esplanade des Arts et Métiers<br>33405 Talence Cedex, France</h4>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="maps" style="width: 100%">
+                        <iframe width="100%" height="400" frameborder="100px" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=esplanade%20des%20arts%20et%20m%C3%A9tiers+(Arts%20et%20M%C3%A9tiers)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                            <a href="https://www.gps.ie/">gps systems</a>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-contact-form">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/xeoqaalq" method="POST" class="contact-form">
+                <div class="form-left">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="organization">Organization:</label>
+                    <input type="text" id="organization" name="organization" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+        
+                <div class="form-right">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="9" required></textarea>
+                </div>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>        
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+/*####################################################################################################*/
+/*GENERAL*/
+/*####################################################################################################*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh; /* Set the minimum height to full viewport height */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    background: whitesmoke;
+    color: #2C3E50;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+main {
+    flex: 1; /* Take up any remaining space between header and footer */
+}
+
+.header, .welcome, .links, .projects {
+    padding: 10px; /* Add padding for sections */
+}
+
+/*################################################*/
+/* Logo */
+/*################################################*/
+.logo-branch {
+    height: 60px;
+}
+
+/*####################################################################################################*/
+/*HEADER*/
+/*####################################################################################################*/
+header {
+    margin-top: -0px;
+    position: relative;
+    padding: 0px 0; /* Increase top and bottom padding as needed */
+}
+
+/* Header Navigation Bar */
+.header-nav {
+    background: #2C333C; /* Dark background for footer nav */
+    padding: 10px;
+}
+
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav li {
+    display: inline-block;
+    position: relative; /* Position relative for dropdown positioning */
+    margin: 0 15px;
+}
+
+.header-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+.header-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Submenu styling */
+.submenu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #444;
+    padding: 10px 0;
+    top: 150%; /* Place it directly below the parent link */
+    right: -20%;
+    width: 150px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submenu li {
+    display: block; /* Stack items vertically */
+    padding: 5px 0;
+}
+
+.submenu li a {
+    color: whitesmoke;
+    padding: 8px 15px;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #FF6F61;
+    text-decoration: none;
+    color: white;
+}
+
+/* Show the submenu on hover */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/*####################################################################################################*/
+/*FOOTER*/
+/*####################################################################################################*/
+footer {
+    margin: 0;
+    background: #2C333C; /* Match footer with the navigation */
+    color: white; /* White text in the footer */
+    padding: 5px;
+}
+
+/* Footer Navigation Bar */
+.footer-nav {
+    background: #2C333C; /* Dark background for footer nav */
+    padding: 10px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav li {
+    margin: 0 15px;
+}
+
+.footer-nav a {
+    color: white; /* White text for footer nav links */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/*####################################################################################################*/
+/* Containers */
+/*####################################################################################################*/
+.section-bg-img {
+    text-align: center; /* Center the text in the section */
+    background-image: url('images/about_bg.png'); /* Update with your image path */
+    background-size: cover; /* Scale the background image to cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 50px; /* Add some padding for content */
+    color: black; /* Optional: Change text color for better visibility */
+}
+
+.section-bg-whitesmoke {
+    text-align: center; /* Center the text in the section */
+    padding: 50px; /* Add some padding for content */
+    color: #2C333C; /* Optional: Change text color for better visibility */
+}
+
+.section-bg-anthracite {
+    text-align: center; /* Center the text in the section */
+    padding: 50px; /* Add some padding for content */
+    background-color: #2C333C; /* Optional: Change text color for better visibility */
+    color: whitesmoke;
+}
+
+.section-bg-anthracite a {
+    color: inherit; /* Use the same color as the parent element */
+    text-decoration: none; /* Remove the underline */
+}
+
+.section-page-logo {
+    position: absolute; /* Position it absolutely */
+    top: 8%; /* Adjust as needed */
+    left: 8%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Center it vertically */
+    z-index: 10; /* Ensure it appears on top of other content */
+}
+
+.div-boxes {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the boxes */
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line */
+}
+
+.div-title-page h1 {
+    font-size: 3rem; /* Makes the text larger */
+    margin: 0;
+    padding: 50px;
+}
+
+/*####################################################################################################*/
+/*ERGONOMY*/
+/*####################################################################################################*/
+/* Link boxes */
+.box {
+    background-color: #2C333C; /* Background color for boxes */
+    color: white; /* Text color */
+    padding: 20px; /* Padding inside the boxes */
+    margin: 10px; /* Margin between boxes */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    width: 150px; /* Fixed width for the boxes */
+    transition: background-color 0.3s; /* Smooth background color change */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+.box:hover {
+    background-color: #FF6F61; /* Change color on hover */
+    font-weight: bold;
+}
